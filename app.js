@@ -18,7 +18,7 @@ const topic=form.topic.selectedOptions[0].text;
 const data={name:form.name.value.trim(),email:form.email.value.trim(),topic,message:form.message.value.trim(),_subject:'HALO enquiry: '+topic,_replyto:form.email.value.trim(),_template:'table',_captcha:'false'};
 btn.disabled=true;btn.textContent='Sending…';status.className='form-status';status.textContent='';
 try{const r=await fetch(form.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});const j=await r.json().catch(()=>({}));
-if(!r.ok||j.success===false||j.success==='false')throw new Error(j.message||'failed');
+if(!r.ok||j.success===false||j.success==='false'){console.warn('[HALO form]',r.status,j.message||j);throw new Error(j.message||'failed')}
 form.reset();status.classList.add('is-success');status.textContent='Thank you. Your enquiry has been sent. We will reply to '+data.email+' within two working days.';}
-catch(err){status.classList.add('is-error');status.innerHTML='Sorry, your enquiry could not be sent. Please try again, or email <a href="mailto:gina.ha@halogbs.com">gina.ha@halogbs.com</a>.';}
+catch(err){status.classList.add('is-error');if(location.protocol==='file:'){status.textContent='The form only sends from the live website (halogbs.com), not from a file opened on this computer.';return}if(/activat/i.test(err.message)){status.textContent='Form not activated yet: please confirm the activation email sent to gina.ha@halogbs.com, then try again.';return}status.innerHTML='Sorry, your enquiry could not be sent. Please try again, or email <a href="mailto:gina.ha@halogbs.com">gina.ha@halogbs.com</a>.';}
 finally{btn.disabled=false;btn.textContent=label}});})();
