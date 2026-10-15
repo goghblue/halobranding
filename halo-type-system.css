@@ -274,3 +274,8 @@ html body:not(:has(#halo-motion-home-hero)) main h2, html body:not(:has(#halo-mo
 
 /* ---------- 21. Services: enquiry button per service ---------- */
 .service-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-3);margin-top:var(--s-3)}
+
+/* ---------- 22. Insights: title turns HALO yellow on hover (list rows and featured article) ---------- */
+.insight-row .insight-title strong, .insight-row .insight-arrow, .insight-feature h2{transition:color .2s ease}
+.insight-row:hover .insight-title strong, .insight-row:hover .insight-arrow, .insight-row:focus-visible .insight-title strong,
+.insight-feature:hover h2, .insight-feature:focus-visible h2{color:#FCB632!important}
