@@ -1,0 +1,13 @@
+/* v9.5 spacing rhythm only. Header, widths and type now live in halo-standard.css (v9.8). */
+/* v9.5 — Shared page rhythm. Content and original Method composition retained. */
+:root{--halo-content-max:1250px;--halo-gutter:54px}
+body:not(.home-page) .pagehero{padding-block:88px 76px}
+body:not(.home-page) .pagehero .eyebrow{margin-bottom:30px}
+body:not(.home-page) .pagehero h1{line-height:1.12;letter-spacing:-.055em}
+body:not(.home-page) .pagehero .lead{color:#555;line-height:1.5}
+body.method-page .hero{padding-top:88px;padding-bottom:85px}
+body.method-page .hero-right{min-width:0}
+body.method-page .section{padding-top:82px;padding-bottom:82px}
+body.method-page .sec-head{gap:45px}
+body.method-page .footer .wrap{max-width:100%;width:100%;padding:0}
+@media(max-width:800px){:root{--halo-gutter:24px}body:not(.home-page) .pagehero{padding-block:65px 55px}body.method-page .hero{padding-block:65px 60px}body.method-page .section{padding-block:65px}}

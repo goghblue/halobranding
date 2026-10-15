@@ -1,0 +1,1 @@
+v9.3: Method page uses shared style.css layout; main sections 01/02 rebuilt as aligned two-column sections with three method cards; SajuGPT base64 images externalized to reduce HTML payload; Insights and other cases unchanged.

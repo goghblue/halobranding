@@ -1,0 +1,1 @@
+(()=>{const items=[...document.querySelectorAll('.service-accordion details.service-item')];if(!items.length)return;const fine=matchMedia('(hover:hover) and (pointer:fine)');if(!fine.matches)return;items.forEach(item=>{item.addEventListener('pointerenter',()=>{items.forEach(x=>x.open=x===item)});item.addEventListener('focusin',()=>{items.forEach(x=>x.open=x===item)})})})();

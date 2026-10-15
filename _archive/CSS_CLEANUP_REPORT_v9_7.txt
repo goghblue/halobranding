@@ -1,0 +1,20 @@
+HALO v9.7 — SAFE CSS CONSOLIDATION / CHANGE LOG
+
+Source: v9.6 Aligned Navigation Pages.
+Main index.html: byte-identical, unchanged.
+Scope: combined two sequential override stylesheets into one, maintaining their exact rule order.
+No CSS declarations removed or altered. Existing inline CSS in Method is NOT removed, because it contains original layout and animation rules and needs a separate, visual regression-tested refactor.
+No case-study HTML files changed or deleted. All other files retained.
+
+Files updated:
+about.html
+method.html
+services.html
+cases.html
+insights.html
+contact.html
+
+New file: page-consistency-consolidated-v9-7.css
+Legacy CSS files retained in archive but no longer loaded by updated pages.
+
+IMPORTANT: This is a structural deduplication, not a verified visual fix for Method header. Method still lacks style.css and has several conflicting inline style blocks. Next stage requires browser comparison before removing or rewriting these.

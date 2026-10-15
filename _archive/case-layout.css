@@ -1,0 +1,21 @@
+/* case-layout.css — the ONE place for case-study page layout.
+   Header/logo come from page-alignment-v9-6.css (same as Method/Services/About…).
+   Change values here; never add per-page header or width CSS inside case-*.html. */
+:root{--case-intro-width:520px}
+
+/* Neutralise leftover generic header{} rules from the original standalone case files */
+body.case-page>header.navhead{display:block!important;height:auto!important;padding:0!important}
+
+/* Back link: same spot on every case page, aligned with the logo */
+.case-back{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)));margin:22px auto 0;font:600 13px/1.4 Poppins,Arial,sans-serif}
+.case-back a{color:#393839;text-decoration:none}
+.case-back a:hover{text-decoration:underline}
+
+/* Content column: same width and left edge as the header */
+body.case-page main .wrap{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:var(--halo-page-width)!important;padding-inline:0!important;margin-inline:auto!important}
+
+/* Hero type: same scale as the other sub-pages */
+body.case-page .hero h1{font-size:clamp(52px,6vw,90px)!important;line-height:1.1}
+body.case-page .hero .intro,body.case-page .hero .lead{font-size:clamp(17px,1.5vw,20px)!important;line-height:1.7;max-width:var(--case-intro-width)!important}
+
+@media(max-width:600px){body.case-page .hero h1{font-size:clamp(42px,10vw,60px)!important}}

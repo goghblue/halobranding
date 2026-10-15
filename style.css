@@ -49,3 +49,31 @@ body{background:#fff;color:var(--ink)}
 /* MASTER v8.0: Hero-only light falloff — retain thin circle outlines, soften luminous spill. */
 .hero .hero-orb.intention{background:rgba(244,243,241,.16)}
 .hero .hero-orb.perception{background:radial-gradient(circle at 39% 51%,rgba(252,182,50,.28) 0%,rgba(252,182,50,.18) 32%,rgba(252,182,50,.065) 66%,rgba(252,182,50,0) 100%);box-shadow:0 0 52px 18px rgba(252,182,50,.085);border-color:rgba(233,189,121,.76)}
+
+/* v8.5 official supplied HALO wordmark */
+.wordmark{display:inline-flex;align-items:center;flex-shrink:0}.wordmark img{display:block;width:142px;height:auto;max-width:100%}.footer .wordmark img{width:120px}@media(max-width:680px){.wordmark img{width:110px}.footer .wordmark img{width:100px}}
+
+/* v9.3 — Method uses shared pagehero/wrap/section/eyebrow/lead/button system */
+body.method-page .pagehero{min-height:0;padding:95px 0 85px;border-bottom:1px solid var(--line)}
+body.method-page .pagehero h1{font-size:clamp(48px,6.3vw,100px);max-width:1100px;line-height:1.13;margin:0 0 24px}
+body.method-page .pagehero h1 .underline{display:inline;text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:7px;text-underline-offset:10px}
+body.method-page .pagehero .lead{font-size:clamp(20px,2.2vw,29px);line-height:1.4;max-width:850px;margin-bottom:20px}
+body.method-page .pagehero .lead span{color:#999}
+body.method-page .pagehero p{font-size:16px;line-height:1.7;color:#666;max-width:750px;margin-bottom:20px}
+body.method-page .section{padding:100px 0}
+body.method-page .sec-head{display:block;margin-bottom:45px}
+body.method-page .sec-head .eyebrow{margin-bottom:20px}
+body.method-page .sec-head .sec-title{font-size:clamp(32px,4.3vw,66px);line-height:1.13;max-width:1000px;margin:0 0 20px}
+body.method-page .sec-head .sec-intro{max-width:760px;color:#666}
+body.method-page .navhead .button{background:var(--yellow);color:var(--black)}
+body.method-page .navhead .wrap{width:min(1240px,calc(100% - 100px));max-width:none;padding:0}
+@media(max-width:800px){body.method-page .pagehero{padding:65px 0 55px}body.method-page .section{padding:65px 0}body.method-page .navhead .wrap{width:calc(100% - 36px)}}
+
+/* v9.3 homepage sections 01–02 layout */
+main > .section .gaplayout{grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr);gap:clamp(40px,7vw,100px);align-items:center}
+main > .section .gaplayout h2{max-width:760px}
+.gap-summary{max-width:420px}.gap-summary .sub{font-size:16px;line-height:1.75;color:#555;margin:0 0 22px}
+main > .section .sectionintro:has(+ .method-cards){display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr);gap:clamp(40px,7vw,100px);align-items:center;margin-bottom:55px}
+.method-summary{max-width:420px}.method-summary p{font-size:16px;line-height:1.75;color:#555;margin-bottom:22px}.method-summary .textlink{display:inline-block}
+.method-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.method-card{background:#f5f5f4;min-height:185px;padding:26px 30px;display:flex;flex-direction:column;justify-content:center}.method-card:last-child{background:#fff3da}.method-card .num{font-size:11px;letter-spacing:.12em;font-weight:700}.method-card h3{font-size:28px;margin:20px 0 7px}.method-card p{font-size:14px;color:#666;margin:0}
+@media(max-width:800px){main > .section .gaplayout,main > .section .sectionintro:has(+ .method-cards){grid-template-columns:1fr;gap:20px}.method-cards{grid-template-columns:1fr}.method-card{min-height:130px}}

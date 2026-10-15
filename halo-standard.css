@@ -1,0 +1,59 @@
+/* halo-standard.css — THE layout standard for every page (index.html included since v10).
+   Nav type (v10): links 14px, button 13px, gap 28px (was 12 / 11 / 22) — Material 3 label size, Lighthouse legible-text >= 12px.
+   All values below are copied from the main page (index.html) as rendered.
+   This file loads LAST on each sub-page, so it wins over every older CSS layer.
+   To change header / logo / width / fonts site-wide: edit here only. */
+:root{--halo-page-width:1240px;--halo-page-gutter:50px}
+
+/* ---------- Fonts (main page) ---------- */
+body{font-family:Arial,Helvetica,sans-serif!important}
+main h1,main h2,.sectiontitle,.sec-title{font-family:Poppins,Arial,sans-serif!important;font-weight:500!important;letter-spacing:-.055em!important;line-height:1.13!important}
+main h1{font-size:clamp(48px,6.3vw,100px)!important}
+main h2.sectiontitle,main .sec-title,main>.section>.wrap>h2,main .sectionintro h2,body.case-page .twocol>div>h2{font-size:clamp(32px,4.3vw,66px)!important}
+main .eyebrow{font-family:Arial,Helvetica,sans-serif!important;font-size:max(12px,.85rem)!important;font-weight:700!important;letter-spacing:.16em!important;line-height:1.5!important;color:#525252!important;text-transform:uppercase}
+
+/* ---------- Header (main page) ---------- */
+.navhead{position:sticky!important;top:0!important;z-index:50!important;display:block!important;height:auto!important;padding:0!important;background:rgba(255,255,255,.97)!important;border-bottom:1px solid #e6e6e4!important;font:15px/1.65 Arial,Helvetica,sans-serif!important}
+.navhead .wrap.navinner{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:none!important;height:80px!important;min-height:80px!important;padding:0!important;margin-inline:auto!important;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.navhead .wordmark img{width:142px!important;max-width:none!important;max-height:none!important;height:auto!important;display:block}
+.navhead .navlinks{gap:28px!important;font-size:14px!important}
+.navhead .navlinks>a:not(.button){font-size:14px!important;font-weight:400!important;color:#44484b!important;text-decoration:none}
+.navhead .navlinks .button{background:#FCB632!important;color:#0A0A0A!important;padding:13px 21px!important;border:0!important;border-radius:24px!important;font:700 13px/1.65 Arial,Helvetica,sans-serif!important;box-shadow:none!important}
+@media(max-width:900px){:root{--halo-page-gutter:24px}.navhead .navlinks{display:none!important}.navhead .navlinks.open{display:flex!important;flex-direction:column;align-items:stretch;position:absolute;top:70px;left:0;right:0;background:#fff;padding:24px;border-bottom:1px solid #ddd}.navhead .wrap.navinner{height:70px!important;min-height:70px!important}.navhead .hamb{display:block!important}}
+@media(max-width:600px){:root{--halo-page-gutter:18px}}
+
+/* ---------- Page width: same column as the header ---------- */
+.pagehero>.wrap,.insights-top>.wrap,main>.section>.wrap,body.method-page .method-shell,body.case-page main .wrap{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:none!important;padding-inline:0!important;margin-inline:auto!important}
+.pagehero,.insights-top{padding-top:88px}
+
+/* ---------- Case-study pages ---------- */
+.case-back{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)));margin:22px auto 0;font:600 13px/1.4 Arial,Helvetica,sans-serif}
+.case-back a{color:#44484b;text-decoration:none}
+.case-back a:hover{text-decoration:underline}
+body.case-page .hero .intro,body.case-page .hero .lead{font-size:clamp(17px,1.5vw,20px)!important;line-height:1.7;max-width:520px!important}
+
+/* ---------- Method page: its hero/sections had their own inner padding ---------- */
+body.method-page main>.hero,body.method-page main>.section{max-width:none!important;margin-inline:0!important;padding-inline:0!important}
+body.method-page>section>.wrap{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:none!important;padding-inline:0!important;margin-inline:auto!important}
+
+/* ---------- Footer (main page) ---------- */
+footer.footer{display:block!important;background:#fff!important;color:#0a0a0a!important;font:15px/1.65 Arial,Helvetica,sans-serif!important;padding:65px 0 30px!important;margin:0!important;border-top:1px solid #e6e6e4!important;width:auto!important;max-width:none!important}
+footer.footer>.wrap{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:none!important;padding:0!important;margin-inline:auto!important}
+footer.footer .footgrid{display:grid!important;grid-template-columns:2fr 1fr 1fr!important;gap:45px!important;margin:0!important;padding:0!important;border:0!important}
+footer.footer .wordmark img{width:120px!important;height:auto!important;display:block}
+footer.footer p.small{font:13.6px/1.5 Arial,Helvetica,sans-serif!important;color:#525252!important;margin:0 0 13.6px!important}
+footer.footer>.wrap>p.small{margin-top:60px!important}
+footer.footer .eyebrow{font:700 13.6px/1.5 Arial,Helvetica,sans-serif!important;letter-spacing:.16em!important;text-transform:uppercase;color:#525252!important;margin:0 0 22px!important}
+footer.footer .footgrid a:not(.wordmark){display:block!important;font:12px/1.65 Arial,Helvetica,sans-serif!important;color:#0a0a0a!important;margin:8px 0!important;text-decoration:none!important}
+@media(max-width:800px){footer.footer .footgrid{grid-template-columns:1fr!important;gap:30px!important}}
+
+/* ---------- Method intro: same format as other pages (eyebrow → title → grey lead) ---------- */
+body.method-page main>.hero{display:block!important;padding:88px 0 76px!important}
+body.method-page main>.hero .eyebrow{margin:0 0 30px!important}
+body.method-page main>.hero h1{margin:0 0 16px!important;max-width:none!important}
+body.method-page .hero-right{padding:0!important;max-width:780px}
+body.method-page .hero-right .lead{font:400 clamp(18px,2vw,25px)/1.5 Arial,Helvetica,sans-serif!important;letter-spacing:normal!important;color:#555!important;margin:0 0 25px!important;max-width:780px}
+@media(max-width:600px){body.method-page main>.hero{padding:65px 0 55px!important}}
+
+/* Method orb graphic spilled past the screen on mobile (sideways scroll) */
+body.method-page{overflow-x:clip}

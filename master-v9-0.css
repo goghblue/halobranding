@@ -1,0 +1,43 @@
+/* HALO v9.0 targeted UX improvements. Original logo, palette and case content unchanged. */
+:root{--halo-muted:#777a7e;--halo-secondary:#52565a}
+/* Homepage vertical rhythm: preserve headline hierarchy while reducing blank travel. */
+body:not(.case-page) .hero{padding-top:clamp(56px,6vw,94px);padding-bottom:clamp(44px,5vw,76px)}
+body:not(.case-page) .hero .wrap{min-height:clamp(540px,46vw,640px)}
+body:not(.case-page) main>.section{padding-top:clamp(56px,6.3vw,92px);padding-bottom:clamp(56px,6.3vw,92px)}
+body:not(.case-page) main>.section .sectionintro{margin-bottom:clamp(22px,3vw,38px)}
+body:not(.case-page) main>.cta{padding-top:clamp(62px,7vw,96px);padding-bottom:clamp(62px,7vw,96px)}
+body:not(.case-page) .brandstrip{padding-top:26px;padding-bottom:26px}
+body:not(.case-page) .eyebrow,body:not(.case-page) .label,body:not(.case-page) .num{color:var(--halo-muted)}
+body:not(.case-page) .section p,body:not(.case-page) .sub,body:not(.case-page) .lead{color:var(--halo-secondary)}
+body:not(.case-page) .navlinks a:not(.button){color:#44484b}
+body:not(.case-page) .navlinks a:hover{color:#111}
+body:not(.case-page) .card p,body:not(.case-page) .small{color:#74777b}
+body:not(.case-page) .card .tag{color:#555b60}
+.service-item summary:hover,.service-item summary:hover strong,.service-item summary:hover .plus{color:#FCB632!important}
+.insights-all{display:inline-block;margin-top:24px}
+/* Insight archive: compact editorial layout and responsive list */
+.insights-top{padding:clamp(48px,6vw,82px) 0 clamp(44px,5vw,70px)}
+.insights-top h1{font-size:clamp(40px,5vw,68px);line-height:1.1;margin:12px 0 16px}
+.insights-intro{color:#666;margin:0 0 34px;max-width:650px}
+.insight-feature{display:block;padding:clamp(24px,3vw,44px) 0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;text-decoration:none}
+.insight-feature h2{font-size:clamp(28px,3.1vw,43px);line-height:1.17;margin:12px 0}
+.insight-feature p{color:#62666a;max-width:700px;margin:0 0 12px}
+.insight-meta,.insight-category,.insight-date{color:#74777b;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.insight-ko{display:inline-block;margin-left:8px;padding:1px 5px;border:1px solid #ddd;border-radius:2px;font-size:9px;letter-spacing:.05em}
+.insights-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:34px 0 16px}
+.insights-filters{display:flex;flex-wrap:wrap;gap:8px}
+.insight-filter{background:#fff;border:1px solid #dedede;border-radius:30px;padding:7px 13px;font:inherit;font-size:12px;cursor:pointer;color:#56595d}
+.insight-filter:hover,.insight-filter.active{border-color:#FCB632;background:#fff8e9;color:#151515}
+.insight-row{display:grid;grid-template-columns:75px 140px minmax(0,1fr) 25px;gap:18px;align-items:start;border-top:1px solid #e6e6e6;padding:22px 0;text-decoration:none}
+.insight-row:last-child{border-bottom:1px solid #e6e6e6}
+.insight-row:hover .insight-title strong,.insight-row:hover .insight-arrow{color:#ba7e0c}
+.insight-title strong{font-size:clamp(16px,1.65vw,21px);line-height:1.3;font-weight:600;display:block}
+.insight-title small{display:block;color:#72767a;font-size:13px;margin-top:5px;line-height:1.5}
+.insight-arrow{font-size:21px;white-space:nowrap}
+.insights-more{text-align:center;margin-top:25px}
+.insights-more [hidden]{display:none!important}
+.insights-bottom{padding:28px 0 54px}
+.insight-empty{color:#777}
+/* case page safeguards: existing layouts and imagery retained */
+.saju-case-restored{visibility:visible}
+@media(max-width:800px){body:not(.case-page) .hero .wrap{min-height:unset}body:not(.case-page) main>.section{padding-top:52px;padding-bottom:52px}.insight-row{grid-template-columns:68px 1fr 20px;gap:10px}.insight-category{grid-column:2;grid-row:1}.insight-date{grid-column:1;grid-row:1}.insight-title{grid-column:1/3;grid-row:2}.insight-arrow{grid-column:3;grid-row:1/3}.insights-toolbar{align-items:flex-start}.insights-top{padding-top:44px}}

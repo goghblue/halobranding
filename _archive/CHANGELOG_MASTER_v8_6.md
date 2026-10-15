@@ -1,0 +1,1 @@
+v8.6: Home hero orb labels and scroll state; right-aligned, unchanged orb gradients; removed duplicate method orbs; hover-to-expand services (click and keyboard retained). Logos and other pages unchanged. Insights originals: some cards currently point to blog listing and require specific post URLs.

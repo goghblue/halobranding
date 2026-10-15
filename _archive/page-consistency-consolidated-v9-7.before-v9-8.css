@@ -1,0 +1,46 @@
+/* Consolidated: v9.5 consistency followed by v9.6 alignment. Cascade order preserved. */
+/* v9.5 — Shared page rhythm. Content and original Method composition retained. */
+:root{--halo-content-max:1250px;--halo-gutter:54px}
+body:not(.home-page) .navhead>.wrap,body:not(.home-page) .pagehero>.wrap,body:not(.home-page) .section>.wrap{max-width:var(--halo-content-max);width:100%;padding-inline:var(--halo-gutter);margin-inline:auto}
+body:not(.home-page) .navhead .navinner{min-height:76px;height:76px}
+body:not(.home-page) .navhead .wordmark img{width:142px;height:auto}
+body:not(.home-page) .navhead .button{background:#FCB632!important;color:#0A0A0A!important;border-color:#FCB632!important;border-radius:50px}
+body:not(.home-page) .navhead .navlinks>a:not(.button){color:#393839}
+body:not(.home-page) .pagehero{padding-block:88px 76px}
+body:not(.home-page) .pagehero .eyebrow{margin-bottom:30px}
+body:not(.home-page) .pagehero h1{line-height:1.12;letter-spacing:-.055em}
+body:not(.home-page) .pagehero .lead{color:#555;line-height:1.5}
+body.method-page>.method-shell{max-width:var(--halo-content-max);width:100%;padding-inline:var(--halo-gutter);margin-inline:auto}
+body.method-page .method-shell>.navhead{display:none}
+body.method-page .hero{padding-top:88px;padding-bottom:85px}
+body.method-page .hero h1{font-size:clamp(66px,6.6vw,104px)}
+body.method-page .hero-right{min-width:0}
+body.method-page .section{padding-top:82px;padding-bottom:82px}
+body.method-page .sec-head{gap:45px}
+body.method-page .sec-title{font-size:clamp(34px,3.7vw,54px)}
+body.method-page .footer .wrap{max-width:100%;width:100%;padding:0}
+@media(max-width:800px){:root{--halo-gutter:24px}body:not(.home-page) .pagehero{padding-block:65px 55px}body.method-page .hero{padding-block:65px 60px}body.method-page .section{padding-block:65px}}
+@media(max-width:600px){:root{--halo-gutter:18px}body.method-page .hero h1{font-size:clamp(52px,12vw,76px)}}
+
+
+/* v9.6 alignment */
+/* v9.6: navigation-page alignment only. Homepage and case-study files are untouched. */
+:root{--halo-page-width:1240px;--halo-page-gutter:50px}
+body .navhead .wrap.navinner{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:var(--halo-page-width)!important;padding:0!important;margin-inline:auto!important;min-height:80px!important;height:80px!important;display:flex;align-items:center;justify-content:space-between;gap:25px}
+body .navhead .wordmark img{width:142px!important;height:auto!important;display:block}
+body .navhead .navlinks{display:flex;align-items:center;gap:24px}
+body .navhead .navlinks>a:not(.button){font-size:12px;color:#393839}
+body .navhead .navlinks .button{background:#FCB632!important;color:#0A0A0A!important;border:1px solid #FCB632!important;border-radius:999px!important;font-size:12px!important;font-weight:600!important}
+body .pagehero>.wrap,body .insights-top>.wrap,body.method-page .method-shell{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important;max-width:var(--halo-page-width)!important;padding-inline:0!important;margin-inline:auto!important}
+body .pagehero,body .insights-top{padding-top:88px}
+body .pagehero h1,body .insights-top h1{font-size:clamp(52px,6vw,90px);line-height:1.12;letter-spacing:-.055em;font-weight:600}
+body .pagehero .lead,body .insights-top .insights-intro{font-size:clamp(18px,2vw,25px)!important;line-height:1.5!important;color:#555!important}
+body .pagehero .eyebrow,body .insights-top .eyebrow,body.method-page .hero .eyebrow{font-size:12px!important;letter-spacing:.16em!important;font-weight:700!important;line-height:1.5!important;color:#525252!important;text-transform:uppercase}
+/* Method keeps its original two-column art direction; only its scale and alignment are harmonised. */
+body.method-page .method-shell{width:min(var(--halo-page-width),calc(100% - 2 * var(--halo-page-gutter)))!important}
+body.method-page .hero{padding-top:88px}
+body.method-page .hero h1{font-size:clamp(58px,6vw,90px)!important}
+body.method-page .hero-right p{font-size:clamp(18px,2vw,25px)!important;line-height:1.5!important;color:#555!important}
+body.method-page .hero-right h2{font-size:clamp(22px,2.4vw,30px)}
+@media(max-width:900px){:root{--halo-page-gutter:24px}body .navhead .navlinks{display:none}body .navhead .navlinks.open{display:flex;gap:14px}body .navhead .wrap.navinner{height:70px!important;min-height:70px!important}}
+@media(max-width:600px){:root{--halo-page-gutter:18px}body .pagehero,body .insights-top{padding-top:65px}body .pagehero h1,body .insights-top h1{font-size:clamp(42px,10vw,60px)}body.method-page .hero h1{font-size:clamp(52px,12vw,76px)!important}}

@@ -1,0 +1,23 @@
+/* HALO v9.2: Method shares the main site visual grid. */
+body:has(.hero-right) {font-family:Poppins,Pretendard,Arial,sans-serif}
+body:has(.hero-right) .wrap{width:min(1240px,calc(100% - 100px))!important;max-width:1240px!important;padding:0!important;margin-inline:auto!important}
+body:has(.hero-right) .navhead{height:auto!important;min-height:76px!important;border-bottom:1px solid #e8e8e8!important;background:rgba(255,255,255,.97)!important}
+body:has(.hero-right) .navinner{min-height:76px!important}
+body:has(.hero-right) .navlinks{gap:22px!important;font-size:12px!important;font-weight:400!important;letter-spacing:normal!important}
+body:has(.hero-right) .navlinks .button{background:#FCB632!important;color:#0A0A0A!important;border:0!important;border-radius:30px!important;padding:13px 21px!important;font-size:11px!important;font-weight:700!important;box-shadow:none!important}
+body:has(.hero-right) .navlinks .button:hover{background:#f4aa20!important}
+body:has(.hero-right) .wordmark img{max-width:125px!important;height:auto!important}
+body:has(.hero-right) main{width:min(1240px,calc(100% - 100px))!important;max-width:1240px!important;margin-inline:auto!important;padding:0!important}
+body:has(.hero-right) main>.hero{max-width:none!important;padding:clamp(72px,8vw,110px) 0 clamp(65px,7vw,100px)!important;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;gap:clamp(35px,5vw,75px)!important}
+body:has(.hero-right) main>.hero h1{font-size:clamp(65px,7vw,100px)!important;line-height:1.06!important}
+body:has(.hero-right) main>.section{padding:clamp(65px,6.5vw,92px) 0!important}
+body:has(.hero-right) .sec-title{font-size:clamp(38px,4.5vw,65px)!important}
+body:has(.hero-right) .eyebrow{color:#575757!important}
+/* Home method signature: a compact visual anchor, not another explanatory paragraph */
+.sectionintro .method-signature{margin-left:auto;align-self:center;min-width:230px;border-left:3px solid #FCB632;padding:13px 0 13px 22px;display:flex;flex-direction:column;gap:3px}
+.method-signature span{font-size:11px;font-weight:600;letter-spacing:.18em;color:#888}
+.method-signature strong{font-size:clamp(15px,1.65vw,23px);line-height:1.2;letter-spacing:-.045em;color:#393839}
+.method-signature sup{font-size:9px;vertical-align:super;letter-spacing:0}
+.method-signature small{font-size:9px;letter-spacing:.13em;color:#888;margin-top:8px}
+@media(max-width:800px){body:has(.hero-right) .wrap,body:has(.hero-right) main{width:calc(100% - 48px)!important}body:has(.hero-right) main>.hero{grid-template-columns:1fr!important;gap:24px!important}body:has(.hero-right) main>.hero h1{font-size:clamp(50px,10vw,78px)!important}.sectionintro .method-signature{margin:28px 0 0;max-width:350px}}
+@media(max-width:520px){body:has(.hero-right) .wrap,body:has(.hero-right) main{width:calc(100% - 36px)!important}}

@@ -1,0 +1,40 @@
+
+/* v8.8: targeted layout corrections; original brand assets and content preserved */
+/* All case-study headers use the same horizontal alignment as the main navigation. */
+body.case-page .navhead .wrap.navinner {width:min(1200px, calc(100% - 48px));max-width:1200px;margin-inline:auto;padding-inline:0;box-sizing:border-box}
+/* Case study tag labels: reduce from previous 12px override by 2px. */
+.selected-work-section .card .tag, .case-grid .card .tag, .grid .card .tag, .card .tag {font-size:10px;line-height:1.45;letter-spacing:.055em}
+/* Hero illustration is confined to the right column, away from the headline. */
+@media(min-width:801px){
+ .hero .halo-motion{right:0;top:220px;width:min(43%,540px);height:310px;min-height:310px}
+ .hero .halo-motion-sticky{height:310px;min-height:310px}
+ .hero .halo-orbs{height:310px;max-width:540px}
+ .hero .halo-orb{width:min(22vw,275px);height:min(22vw,275px)}
+ .hero .halo-label-a{left:-3%}.hero .halo-label-b{right:-3%}
+}
+@media(min-width:801px) and (max-width:1100px){
+ .hero .halo-motion{width:42%;top:250px}
+ .hero .halo-orb{width:min(21vw,225px);height:min(21vw,225px)}
+ .hero .halo-orb-label{font-size:8px;padding:5px}
+}
+@media(max-width:800px){.hero .halo-motion{max-width:100%;overflow:visible}}
+
+/* v8.9: focused spacing optimisation for Insights and Meet HALO only. */
+body.halo-compact-page .pagehero{padding:clamp(52px,6vw,82px) 0 clamp(35px,4vw,55px)}
+body.halo-compact-page .pagehero .eyebrow{margin-bottom:14px}
+body.halo-compact-page .pagehero h1{margin-bottom:16px}
+body.halo-compact-page .section{padding:clamp(52px,6vw,78px) 0}
+body.halo-compact-page .section .eyebrow{margin-bottom:14px}
+body.halo-compact-page .section h2{margin-bottom:25px}
+body.halo-compact-page .cta{padding:clamp(65px,7vw,90px) 0}
+body.halo-compact-page .footer{padding-top:46px}
+body.halo-compact-page .insight-list{margin-top:26px;gap:18px}
+body.halo-compact-page .insight-card{min-height:unset;padding:25px}
+body.halo-compact-page .insight-card .label{margin-top:12px}
+body.halo-compact-page .aboutgrid{gap:clamp(28px,5vw,62px)}
+body.halo-compact-page .portrait{height:clamp(340px,36vw,460px)}
+body.halo-compact-page .storygrid{margin-top:30px;gap:25px 60px}
+body.halo-compact-page .storygrid>div{padding-top:16px}
+body.halo-compact-page .storygrid p,body.halo-compact-page .storyclose p{line-height:1.7}
+body.halo-compact-page .storyclose{margin-top:34px}
+@media(max-width:680px){body.halo-compact-page .pagehero{padding:42px 0 30px}body.halo-compact-page .section{padding:44px 0}body.halo-compact-page .cta{padding:56px 0}body.halo-compact-page .portrait{height:380px}body.halo-compact-page .insight-card{padding:20px}}
