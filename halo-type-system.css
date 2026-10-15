@@ -252,3 +252,22 @@ body .button.ghost:hover, body .button.ghost:focus-visible{border-color:#FCB632!
 
 /* ---------- 19. Trademark mark: small, raised, does not affect line height ---------- */
 sup.tm{font-size:.32em;vertical-align:super;line-height:0;letter-spacing:0;margin-left:.08em;font-weight:500}
+
+/* ---------- 20. Sub-page scale (every page except home) ----------
+   Home keeps the large editorial scale; detail pages are for reading, so one step tighter
+   (common UI ranges at 1440px: page title 56-72, section title 36-48, section gap 80-96). */
+body:not(:has(#halo-motion-home-hero)){
+  --t-display: clamp(40px, 4.6vw, 66px);  /* 66 (was 91) */
+  --t-h2:      clamp(28px, 3vw, 44px);    /* 43 (was 62) */
+  --t-h3:      clamp(22px, 2vw, 30px);    /* 29 (was 37) */
+  --t-h4:      clamp(19px, 1.5vw, 22px);  /* 22 (was 26) */
+  --t-lead:    clamp(17px, 1.4vw, 20px);  /* 20 (was 22) */
+  --s-section: clamp(56px, 6.1vw, 88px);  /* 88 (was 120) */
+  --s-hero-top: clamp(48px, 5vw, 72px);   /* 72 (was 96) */
+}
+body:not(:has(#halo-motion-home-hero)) main h1{font-size:var(--t-display)!important;line-height:1.08!important}
+body:not(:has(#halo-motion-home-hero)) .pagehero .lead, body:not(:has(#halo-motion-home-hero)) .hero-right .lead{font-size:var(--t-lead)!important}
+@media (max-width:800px){
+  body:not(:has(#halo-motion-home-hero)){--s-section:48px;--s-hero-top:40px}
+}
+html body:not(:has(#halo-motion-home-hero)) main h2, html body:not(:has(#halo-motion-home-hero)) main .sectiontitle, html body:not(:has(#halo-motion-home-hero)) main .sec-title, html body:not(:has(#halo-motion-home-hero)) main .bigquote, html body:not(:has(#halo-motion-home-hero)) main p.quote, html body:not(:has(#halo-motion-home-hero)) > section h2{font-size:var(--t-h2)!important}
