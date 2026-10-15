@@ -41,3 +41,11 @@ case-samsung, case-hanwha, case-cheonseo, case-medilyn, case-dobano, case-saju
 - Logo files: single grey #585858 on transparent, PNG ≥ 800px wide or SVG. Per-logo optical size tweaks live in halo-type-system.css (SajuGPT 22px, Hanwha Intelligence 52px).
 - When logos exceed 12 (more than 2 rows): switch to the auto-flow marquee. Reference build: `_archive/logo-marquee-reference.html` (copy its <style> block and the `.marquee-track` wrapper with duplicated, aria-hidden logos).
 
+## Calls to action: one label per intent
+HALO sells the whole journey (Diagnosis → Identity → Strategy → Activation), not the Diagnostic alone.
+- Contact (primary, yellow): **Discuss Your Brand ↗** → contact.html — nav button, home hero, every bottom CTA band
+- Work: **Explore Our Work ↗** → cases.html · Method: **Explore the method ↗** → method.html
+- Services: **View all services ↗** · About: **Meet HALO ↗** · Insights: **All insights ↗**
+- diagnostic.html is the Brand Diagnosis service detail page (linked from Services and the footer), not the main CTA.
+Never add a new wording for an existing intent.
+
