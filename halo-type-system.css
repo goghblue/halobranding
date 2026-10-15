@@ -215,3 +215,6 @@ body .logo-item img[src*="client-intelligence"]{height:52px!important}
 @keyframes halo-breathe-a{from{translate:0 0}to{translate:-10px 0}}
 @keyframes halo-breathe-b{from{translate:0 0}to{translate:10px 0}}
 @keyframes halo-shared-in{from{filter:opacity(0) blur(6px);scale:.92}to{filter:opacity(1) blur(0);scale:1}}
+
+/* ---------- 16. Home hero subtitle: balanced line breaks (no single orphan word) ---------- */
+body main > .hero .wrap > p{text-wrap:balance}
