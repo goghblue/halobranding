@@ -238,9 +238,6 @@ body main > .hero .wrap > p{text-wrap:balance}
 /* hover: whole card turns HALO yellow */
 .journey-card:hover, .journey-card:focus-visible{background:#FCB632}
 .journey-card:hover p, .journey-card:hover .num, .journey-card:focus-visible p{color:#0a0a0a!important}
-.journey-loop{text-align:center;margin-top:var(--s-6)}
-.journey-loop p{margin:0 auto!important;max-width:none;color:var(--ink-2)!important;font-size:16px!important}
-.journey-loop .journey-loop-title{font-size:20px!important;color:var(--ink)!important;margin-bottom:var(--s-1)!important}
 @media (max-width:1000px){.journey-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:800px){
   .journey .journey-gap{grid-template-columns:1fr;gap:var(--s-3);padding-bottom:var(--s-6)}
