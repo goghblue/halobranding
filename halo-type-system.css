@@ -252,3 +252,6 @@ body main > .hero .wrap > p{text-wrap:balance}
 /* ---------- 18. Outline (ghost) buttons: border turns HALO yellow on hover ---------- */
 body .button.ghost{transition:border-color .2s ease}
 body .button.ghost:hover, body .button.ghost:focus-visible{border-color:#FCB632!important}
+
+/* ---------- 19. Trademark mark: small, raised, does not affect line height ---------- */
+sup.tm{font-size:.32em;vertical-align:super;line-height:0;letter-spacing:0;margin-left:.08em;font-weight:500}
