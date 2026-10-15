@@ -289,3 +289,10 @@ html body footer.footer .wordmark img{filter:brightness(0)}            /* yellow
 html body footer.footer .eyebrow, html body footer.footer p.small{color:#2b2b2b!important}
 html body footer.footer .footgrid a:not(.wordmark){color:#0a0a0a!important}
 html body footer.footer .footgrid a:not(.wordmark):hover{text-decoration:underline!important;text-underline-offset:3px}
+
+/* ---------- 25. Method CTA matches every other page: white band, stacked, yellow button ---------- */
+html body.method-page > section.cta{background:#fff!important;color:#0a0a0a!important}
+html body.method-page > section.cta .cta-inner{display:block!important}
+html body.method-page > section.cta h2{margin-bottom:var(--s-3)!important;max-width:870px}
+html body.method-page > section.cta .button{background:#FCB632!important;color:#0a0a0a!important;border:0!important;padding:13px 21px!important;border-radius:24px!important;margin-top:0!important}
+html body.method-page > section.cta .eyebrow{color:#525252!important}
