@@ -248,3 +248,7 @@ body main > .hero .wrap > p{text-wrap:balance}
   .journey .journey-services-head{flex-direction:column;align-items:flex-start}
   .journey-cards{grid-template-columns:1fr}
 }
+
+/* ---------- 18. Outline (ghost) buttons: border turns HALO yellow on hover ---------- */
+body .button.ghost{transition:border-color .2s ease}
+body .button.ghost:hover, body .button.ghost:focus-visible{border-color:#FCB632!important}
