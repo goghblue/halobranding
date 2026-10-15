@@ -279,3 +279,6 @@ html body:not(:has(#halo-motion-home-hero)) main h2, html body:not(:has(#halo-mo
 .insight-row .insight-title strong, .insight-row .insight-arrow, .insight-feature h2{transition:color .2s ease}
 .insight-row:hover .insight-title strong, .insight-row:hover .insight-arrow, .insight-row:focus-visible .insight-title strong,
 .insight-feature:hover h2, .insight-feature:focus-visible h2{color:#FCB632!important}
+
+/* ---------- 23. Contact form note under the submit button ---------- */
+body form .form-note{margin:var(--s-1) 0 0!important;font-size:var(--t-caption)!important;line-height:1.5!important;color:var(--ink-3)!important}
