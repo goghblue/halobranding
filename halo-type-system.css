@@ -271,3 +271,6 @@ body:not(:has(#halo-motion-home-hero)) .pagehero .lead, body:not(:has(#halo-moti
   body:not(:has(#halo-motion-home-hero)){--s-section:48px;--s-hero-top:40px}
 }
 html body:not(:has(#halo-motion-home-hero)) main h2, html body:not(:has(#halo-motion-home-hero)) main .sectiontitle, html body:not(:has(#halo-motion-home-hero)) main .sec-title, html body:not(:has(#halo-motion-home-hero)) main .bigquote, html body:not(:has(#halo-motion-home-hero)) main p.quote, html body:not(:has(#halo-motion-home-hero)) > section h2{font-size:var(--t-h2)!important}
+
+/* ---------- 21. Services: enquiry button per service ---------- */
+.service-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-3);margin-top:var(--s-3)}

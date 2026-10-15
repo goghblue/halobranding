@@ -48,5 +48,6 @@ HALO sells the whole journey (Diagnosis → Identity → Strategy → Activation
 - Work: **Explore Our Work ↗** → cases.html · Method: **Explore the method ↗** → method.html
 - Services: **View all services ↗** · About: **Meet HALO ↗** · Insights: **All insights ↗**
 - diagnostic.html is the Brand Diagnosis service detail page (nav button, Services and footer link to it).
+- Per-service enquiry (Services page only): **Discuss Brand Diagnosis / Identity / Strategy / Activation ↗** → contact.html?service=<diagnosis|identity|strategy|activation>#enquiry (preselects the Topic; handled in app.js)
 Never add a new wording for an existing intent.
 
