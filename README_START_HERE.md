@@ -43,9 +43,10 @@ case-samsung, case-hanwha, case-cheonseo, case-medilyn, case-dobano, case-saju
 
 ## Calls to action: one label per intent
 HALO sells the whole journey (Diagnosis → Identity → Strategy → Activation), not the Diagnostic alone.
-- Contact (primary, yellow): **Discuss Your Brand ↗** → contact.html — nav button, home hero, every bottom CTA band
+- Contact (primary, yellow): **Discuss Your Brand ↗** → contact.html — home hero and every bottom CTA band
+- Top nav keeps: Method · Services · Cases · Insights · About · Contact + yellow **Brand Diagnostic ↗** button (owner's choice)
 - Work: **Explore Our Work ↗** → cases.html · Method: **Explore the method ↗** → method.html
 - Services: **View all services ↗** · About: **Meet HALO ↗** · Insights: **All insights ↗**
-- diagnostic.html is the Brand Diagnosis service detail page (linked from Services and the footer), not the main CTA.
+- diagnostic.html is the Brand Diagnosis service detail page (nav button, Services and footer link to it).
 Never add a new wording for an existing intent.
 
