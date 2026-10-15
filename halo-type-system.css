@@ -218,3 +218,33 @@ body .logo-item img[src*="client-intelligence"]{height:52px!important}
 
 /* ---------- 16. Home hero subtitle: balanced line breaks (no single orphan word) ---------- */
 body main > .hero .wrap > p{text-wrap:balance}
+
+/* ---------- 17. Home "journey": approach + core methodology + four services in one section ---------- */
+.journey .journey-gap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,4.5vw,72px);align-items:start;padding-bottom:var(--s-8);border-bottom:1px solid #e3e3e1}
+.journey .journey-gap h2{margin-bottom:0!important}
+.journey .journey-gap-text p{font-size:18px!important;line-height:1.7!important;color:var(--ink-2)!important;margin:0 0 var(--s-3)!important;max-width:none}
+.journey .journey-method{text-align:center;padding:var(--s-8) 0}
+.journey .journey-method h3{font-size:var(--t-h2)!important;line-height:1.1!important;letter-spacing:-.045em!important;margin:0 0 var(--s-2)!important}
+.journey .journey-steps{font-size:var(--t-lead)!important;color:var(--ink-2)!important;margin:0 auto var(--s-3)!important;max-width:none}
+.journey .journey-services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--s-4);margin-bottom:var(--s-4)}
+.journey .journey-services-head h3{font-size:clamp(28px,3vw,44px)!important;line-height:1.15!important;letter-spacing:-.04em!important;margin:0!important}
+.journey .journey-services-head .button{white-space:nowrap;flex:none}
+.journey-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-3)}
+.journey-card{display:flex;flex-direction:column;gap:var(--s-1);padding:var(--s-4);background:#f3f3f1;color:var(--ink);text-decoration:none;transition:background-color .2s ease}
+.journey-card .num{font-size:14px;color:var(--ink-2)}
+.journey-card h3{margin:var(--s-2) 0 0!important}
+.journey-card p{font-size:16px!important;line-height:1.6!important;color:var(--ink-2)!important;margin:0 0 var(--s-3)!important;max-width:none}
+.journey-card .journey-more{margin-top:auto;font:700 14px/1.4 Arial,Helvetica,sans-serif}
+/* hover: whole card turns HALO yellow */
+.journey-card:hover, .journey-card:focus-visible{background:#FCB632}
+.journey-card:hover p, .journey-card:hover .num, .journey-card:focus-visible p{color:#0a0a0a!important}
+.journey-loop{text-align:center;margin-top:var(--s-6)}
+.journey-loop p{margin:0 auto!important;max-width:none;color:var(--ink-2)!important;font-size:16px!important}
+.journey-loop .journey-loop-title{font-size:20px!important;color:var(--ink)!important;margin-bottom:var(--s-1)!important}
+@media (max-width:1000px){.journey-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:800px){
+  .journey .journey-gap{grid-template-columns:1fr;gap:var(--s-3);padding-bottom:var(--s-6)}
+  .journey .journey-method{padding:var(--s-6) 0}
+  .journey .journey-services-head{flex-direction:column;align-items:flex-start}
+  .journey-cards{grid-template-columns:1fr}
+}
