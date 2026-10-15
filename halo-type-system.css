@@ -282,3 +282,10 @@ html body:not(:has(#halo-motion-home-hero)) main h2, html body:not(:has(#halo-mo
 
 /* ---------- 23. Contact form note under the submit button ---------- */
 body form .form-note{margin:var(--s-1) 0 0!important;font-size:var(--t-caption)!important;line-height:1.5!important;color:var(--ink-3)!important}
+
+/* ---------- 24. Footer: HALO yellow ---------- */
+html body footer.footer{background:#FCB632!important;border-top:1px solid rgba(10,10,10,.12)!important;color:#0a0a0a!important}
+html body footer.footer .wordmark img{filter:brightness(0)}            /* yellow asterisk would vanish on yellow: logo goes black */
+html body footer.footer .eyebrow, html body footer.footer p.small{color:#2b2b2b!important}
+html body footer.footer .footgrid a:not(.wordmark){color:#0a0a0a!important}
+html body footer.footer .footgrid a:not(.wordmark):hover{text-decoration:underline!important;text-underline-offset:3px}
