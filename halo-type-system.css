@@ -297,11 +297,12 @@ html body.method-page > section.cta h2{margin-bottom:var(--s-3)!important;max-wi
 html body.method-page > section.cta .button{background:#FCB632!important;color:#0a0a0a!important;border:0!important;padding:13px 21px!important;border-radius:24px!important;margin-top:0!important}
 html body.method-page > section.cta .eyebrow{color:#525252!important}
 
-/* ---------- 26. Home "Our approach": paragraph's first line sits on the headline's first line (shared baseline) ---------- */
+/* ---------- 26. Home "Our approach": paragraph top aligned with the headline's first line ---------- */
 @media (min-width:801px){
   .journey .journey-gap{grid-template-rows:auto auto;row-gap:0!important;align-items:start}
   .journey .journey-gap > div:first-child{display:contents}
   .journey .journey-gap > div:first-child > .eyebrow{grid-column:1;grid-row:1}
-  .journey .journey-gap > div:first-child > h2{grid-column:1;grid-row:2;align-self:baseline}
-  .journey .journey-gap-text{grid-column:2;grid-row:2;align-self:baseline}
+  .journey .journey-gap > div:first-child > h2{grid-column:1;grid-row:2;align-self:start}
+  /* top of the paragraph's capitals = top of the headline's capitals (half-leading difference compensated) */
+  .journey .journey-gap-text{grid-column:2;grid-row:2;align-self:start;padding-top:max(0px, calc(var(--t-h2) * .2 - 9px))}
 }
