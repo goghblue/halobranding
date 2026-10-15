@@ -2,37 +2,41 @@
   {
     "title": "2025: A Brand Health Check",
     "year": 2025,
-    "month": null,
+    "month": 3,
     "category": "Brand Review",
     "summary": "A practical checklist for customer focus, digital readiness, brand messaging, experience and responsibility.",
-    "url": "https://www.halogbs.com/post/2025%EB%85%84-%EB%B8%8C%EB%9E%9C%EB%93%9C-%EA%B1%B4%EA%B0%95%EA%B2%80%EC%A7%84",
-    "lang": "KO"
+    "url": "https://www.halogbs.com/post/2025년-브랜드-건강검진",
+    "lang": "KO",
+    "local": "post/2025년-브랜드-건강검진.html"
   },
   {
     "title": "HALO × SK Telecom: AI Marketing Collaboration",
     "year": 2025,
-    "month": null,
+    "month": 6,
     "category": "AI & Brand",
     "summary": "An announced collaboration exploring AI-powered customer insights and brand strategy.",
-    "url": "https://www.halogbs.com/post/%ED%97%A4%EC%9D%BC%EB%A1%9C-halo-sk%ED%85%94%EB%A0%88%EC%BD%A4-ai-%EA%B8%B0%EB%B0%98-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%82%AC%EC%97%85-%ED%98%91%EB%A0%A5-mou-%EC%B2%B4%EA%B2%B0",
-    "lang": "KO"
+    "url": "https://www.halogbs.com/post/헤일로-halo-sk텔레콤-ai-기반-마케팅-사업-협력-mou-체결",
+    "lang": "KO",
+    "local": "post/헤일로-halo-sk텔레콤-ai-기반-마케팅-사업-협력-mou-체결.html"
   },
   {
     "title": "The Hybrid Consumer Era",
     "year": 2024,
-    "month": null,
+    "month": 2,
     "category": "Digital",
     "summary": "How connected online and offline experiences, customer participation and data-informed decisions reshape brand management.",
-    "url": "https://www.halogbs.com/blog",
-    "lang": "KO"
+    "url": "https://www.halogbs.com/post/하이브리드시대의-디지털-컨슈머-우리는-어떻게-브랜드를-경영할-것인가",
+    "lang": "KO",
+    "local": "post/하이브리드시대의-디지털-컨슈머-우리는-어떻게-브랜드를-경영할-것인가.html"
   },
   {
     "title": "Digital Brand Management Research",
     "year": 2023,
-    "month": null,
+    "month": 7,
     "category": "Brand Review",
     "summary": "A look at an earlier digital brand management research initiative in Korea.",
-    "url": "https://www.halogbs.com/blog",
-    "lang": "KO"
+    "url": "https://www.halogbs.com/post/마케팅협회-디지털브랜드경영연구소-하지현소장-위촉",
+    "lang": "KO",
+    "local": "post/마케팅협회-디지털브랜드경영연구소-하지현소장-위촉.html"
   }
 ]
