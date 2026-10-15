@@ -106,8 +106,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid #
 
 /* ---------- 5. Mobile ---------- */
 @media (max-width: 800px){
-  :root{--s-section:72px;--s-hero-top:56px}
+  :root{--s-section:48px;--s-hero-top:40px}
   body main h3{font-size:20px!important}
+  /* stacked heads and leads: one step tighter on small screens */
+  body .sectionintro, body .sec-head, body h2.sectiontitle + p, body h2.sectiontitle + .smalllead,
+  body main > .section .sectionintro:has(+ .method-cards){margin-bottom:var(--s-4)!important}
+  /* home hero: orbs sit in the flow on mobile, so drop the desktop space reserved for them */
+  body main > section.hero{min-height:0!important}
+  body main > section.hero > .wrap{min-height:0!important;padding-bottom:0!important}
+  /* the section padding already ends the section: drop trailing margins of its last block */
+  body main section > :last-child, body main section > .wrap > :last-child, body main section > .wrap > :last-child > :last-child{margin-bottom:0!important}
+  html body.method-page main .perspective, html body.method-page main .step{padding-bottom:var(--s-4)!important}
 }
 
 /* ---------- 6. Case-study hero facts (Hanwha format, shared by every case page) ---------- */
