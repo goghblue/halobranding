@@ -297,5 +297,11 @@ html body.method-page > section.cta h2{margin-bottom:var(--s-3)!important;max-wi
 html body.method-page > section.cta .button{background:#FCB632!important;color:#0a0a0a!important;border:0!important;padding:13px 21px!important;border-radius:24px!important;margin-top:0!important}
 html body.method-page > section.cta .eyebrow{color:#525252!important}
 
-/* ---------- 26. Home "Our approach": paragraph vertically centred on the whole left block (label + headline) ---------- */
-@media (min-width:801px){.journey .journey-gap{align-items:center}}
+/* ---------- 26. Home "Our approach": paragraph's first line sits on the headline's first line (shared baseline) ---------- */
+@media (min-width:801px){
+  .journey .journey-gap{grid-template-rows:auto auto;row-gap:0!important;align-items:start}
+  .journey .journey-gap > div:first-child{display:contents}
+  .journey .journey-gap > div:first-child > .eyebrow{grid-column:1;grid-row:1}
+  .journey .journey-gap > div:first-child > h2{grid-column:1;grid-row:2;align-self:baseline}
+  .journey .journey-gap-text{grid-column:2;grid-row:2;align-self:baseline}
+}
