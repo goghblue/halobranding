@@ -317,12 +317,15 @@ body .form-done{align-self:start;background:#fafafa;border:1px solid #e3e3e0;bor
 body .form-done-head{display:flex;align-items:center;gap:14px}
 body .form-done-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#FCB632;color:#0A0A0A;font-size:18px;line-height:1}
 body .form-done-head .eyebrow{margin:0!important}
-body .form-done h3{margin:22px 0 14px!important}
-body .form-done p{margin:0 0 10px!important}
+/* everything below the head starts on the eyebrow's text line: icon 40 + gap 14 */
+body .form-done>:not(.form-done-head){margin-left:54px!important}
+body .form-done h3{font-family:Poppins,sans-serif!important;font-size:var(--t-h4)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:-.01em;color:#0A0A0A!important;margin-top:14px!important;margin-bottom:16px!important}
+body .form-done p{font-size:16px!important;line-height:1.7!important;margin-top:0!important;margin-bottom:0!important}
 body .form-done .form-done-lead{color:#0A0A0A!important}
-body .form-done .form-done-next{color:#5a5a5a!important;margin-bottom:24px!important}
-body .form-done-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e3e3e0;padding-top:18px;font-size:14px}
-body .form-done-foot span:last-child{color:#6a6a6a}
+body .form-done .form-done-next{color:rgb(82,86,90)!important;margin-bottom:24px!important}
+body .form-done-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e3e3e0;padding-top:16px;font-size:12px;line-height:1.5;letter-spacing:.04em;color:rgb(82,82,82)}
+body .form-done-foot span:first-child{font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+@media (max-width:800px){body .form-done{padding:22px 20px 18px}}
 .enquiry-form .form-status.is-error{color:#b42318!important}
 .enquiry-form .form-status a{color:inherit;text-decoration:underline}
 
