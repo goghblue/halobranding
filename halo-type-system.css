@@ -316,3 +316,52 @@ html body.method-page > section.cta .eyebrow{color:#525252!important}
 .enquiry-form .form-status.is-success{color:#1f6f3f!important}
 .enquiry-form .form-status.is-error{color:#b42318!important}
 .enquiry-form .form-status a{color:inherit;text-decoration:underline}
+
+/* ---------- 27. Mobile tidy (≤800px): logo loop, list-style service/method rows, 2-col footer ---------- */
+body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only used by the mobile loop */
+@media (max-width:800px){
+  /* clients: one auto-scrolling row instead of a 2×5 grid (app.js adds aria-hidden clones) */
+  body .brandstrip{overflow:hidden}
+  body .brandstrip .logos{display:flex!important;width:max-content;gap:0;animation:halo-logo-loop 32s linear infinite}
+  body .brandstrip .logo-item, body .brandstrip .logo-item.is-clone{display:flex!important;flex:none!important;min-width:0!important;margin-right:44px}
+  body .brandstrip .logo-item img{width:auto!important;max-width:none!important;height:30px!important}
+  body .brandstrip .logo-item img[src*="client-intelligence"]{height:44px!important}
+  body .brandstrip .logo-item img[src*="client-sajugpt"]{height:19px!important}
+  @keyframes halo-logo-loop{to{transform:translateX(-50%)}}
+
+  /* home services: thin divided rows, whole row is the link */
+  .journey-cards{gap:0!important;border-top:1px solid #e3e3e0}
+  .journey-card{display:grid!important;grid-template-columns:28px 1fr auto;column-gap:12px;align-items:baseline;padding:18px 0!important;background:none!important;border-bottom:1px solid #e3e3e0}
+  .journey-card .num{grid-row:1/3}
+  .journey-card h3{margin:0!important}
+  .journey-card p{grid-column:2;margin:4px 0 0!important;font-size:15px!important;line-height:1.5!important}
+  .journey-card .journey-more{grid-column:3;grid-row:1;font-size:0}
+  .journey-card .journey-more::after{content:"↗";font-size:18px}
+  .journey-card:hover h3, .journey-card:focus-visible h3, .journey-card:hover .journey-more{color:#FCB632}
+
+  /* method: same row treatment for perspectives and steps */
+  html body.method-page .perspectives{gap:0!important;border-top:1px solid #e3e3e0}
+  html body.method-page #approach .perspective:not(:nth-child(3)){background:none!important}
+  html body.method-page .perspectives .perspective{min-height:0!important;padding:18px 0!important;background:none!important;border-bottom:1px solid #e3e3e0}
+  html body.method-page .perspectives .perspective:nth-child(3){background:#fff7e6!important;padding:18px 14px!important}
+  html body.method-page .perspective h3{margin:6px 0 4px!important}
+  html body.method-page .steps{border:0!important;border-top:1px solid #e3e3e0!important}
+  html body.method-page .step{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:baseline;padding:18px 0!important;border-bottom:1px solid #e3e3e0!important}
+  html body.method-page .step h3{margin:0!important}
+  html body.method-page .step h3:after{display:none}
+  html body.method-page .step .purpose{grid-column:2;margin:2px 0 0!important}
+  html body.method-page .step:before{display:none!important}
+  html body.method-page .halo-motion{overflow:hidden}             /* orb no longer pushes the page sideways */
+
+  /* services: no big gap under titles; per-service buttons outlined so only the bottom CTA is yellow */
+  body .split{gap:12px!important}
+  body .service-actions .button{background:#fff!important;border:1px solid #ccc!important}
+
+  /* footer: brand on top, Explore | Connect side by side */
+  html body footer.footer .footgrid{grid-template-columns:1fr 1fr!important;gap:30px 20px!important}
+  html body footer.footer .footgrid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:800px) and (prefers-reduced-motion:reduce){
+  body .brandstrip .logos{animation:none;overflow-x:auto;width:auto}
+  body .brandstrip .logo-item.is-clone{display:none!important}
+}

@@ -22,3 +22,6 @@ if(!r.ok||j.success===false||j.success==='false'){console.warn('[HALO form]',r.s
 form.reset();status.classList.add('is-success');status.textContent='Thank you. Your enquiry has been sent. We will reply to '+data.email+' within two working days.';}
 catch(err){status.classList.add('is-error');if(location.protocol==='file:'){status.textContent='The form only sends from the live website (halogbs.com), not from a file opened on this computer.';return}if(/activat/i.test(err.message)){status.textContent='Form not activated yet: please confirm the activation email sent to gina.ha@halogbs.com, then try again.';return}status.innerHTML='Sorry, your enquiry could not be sent. Please try again, or email <a href="mailto:gina.ha@halogbs.com">gina.ha@halogbs.com</a>.';}
 finally{btn.disabled=false;btn.textContent=label}});})();
+
+// Clients strip: duplicate logos so the mobile loop is seamless (clones hidden on desktop by CSS).
+(()=>{const row=document.querySelector('.brandstrip .logos');if(!row)return;[...row.children].forEach(el=>{const c=el.cloneNode(true);c.classList.add('is-clone');c.setAttribute('aria-hidden','true');row.appendChild(c)})})();
