@@ -363,6 +363,11 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
   body .split{gap:12px!important}
   body .service-actions .button{background:#fff!important;border:1px solid #ccc!important}
 
+  /* tap targets ≥44px: text links get an invisible taller hit area; footer links get more spacing */
+  body main .textlink{position:relative}
+  body main .textlink::before{content:"";position:absolute;left:-6px;right:-6px;top:50%;height:48px;transform:translateY(-50%)}
+  html body footer.footer .footgrid a:not(.wordmark){margin:0!important;padding:12px 0!important}
+  html body footer.footer .footgrid a.wordmark{display:inline-block;padding:8px 0}
   /* footer: brand on top, Explore | Connect side by side */
   html body footer.footer .footgrid{grid-template-columns:1fr 1fr!important;gap:30px 20px!important}
   html body footer.footer .footgrid>div:first-child{grid-column:1/-1}
