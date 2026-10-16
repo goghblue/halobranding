@@ -387,3 +387,7 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
   body .brandstrip .logos{animation:none;overflow-x:auto;width:auto}
   body .brandstrip .logo-item.is-clone{display:none!important}
 }
+
+/* Method: plain-language definition under the hero (quotable by search/AI) */
+body .method-def{max-width:640px;margin:28px 0 0!important;font-size:16px!important;line-height:1.7!important;color:rgb(82,86,90)!important}
+body .method-def strong{color:#0A0A0A;font-weight:600}
