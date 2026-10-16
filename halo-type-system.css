@@ -313,7 +313,16 @@ html body.method-page > section.cta .eyebrow{color:#525252!important}
 .enquiry-form [aria-invalid=true]{border-color:#b42318!important;outline-color:#b42318}
 .enquiry-form button[disabled]{opacity:.6;cursor:progress}
 .enquiry-form .form-status{margin:var(--s-2) 0 0!important;font-size:15px!important;line-height:1.5!important}
-.enquiry-form .form-status.is-success{color:#1f6f3f!important}
+body .form-done{align-self:start;background:#fafafa;border:1px solid #e3e3e0;border-radius:16px;padding:28px 30px 22px;outline:none}
+body .form-done-head{display:flex;align-items:center;gap:14px}
+body .form-done-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#FCB632;color:#0A0A0A;font-size:18px;line-height:1}
+body .form-done-head .eyebrow{margin:0!important}
+body .form-done h3{margin:22px 0 14px!important}
+body .form-done p{margin:0 0 10px!important}
+body .form-done .form-done-lead{color:#0A0A0A!important}
+body .form-done .form-done-next{color:#5a5a5a!important;margin-bottom:24px!important}
+body .form-done-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e3e3e0;padding-top:18px;font-size:14px}
+body .form-done-foot span:last-child{color:#6a6a6a}
 .enquiry-form .form-status.is-error{color:#b42318!important}
 .enquiry-form .form-status a{color:inherit;text-decoration:underline}
 
