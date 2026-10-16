@@ -21,9 +21,9 @@ try{const r=await fetch(form.dataset.endpoint,{method:'POST',headers:{'Content-T
 if(!r.ok||j.success===false||j.success==='false'){console.warn('[HALO form]',r.status,j.message||j);throw new Error(j.message||'failed')}
 const [u,dom]=data.email.split('@'),masked=u[0]+'•••@'+dom; // show only enough of the address to recognise it
 const done=document.createElement('div');done.className='form-done';done.tabIndex=-1;done.setAttribute('role','status');done.setAttribute('aria-labelledby','form-done-title');
-done.innerHTML='<div class="form-done-head"><span class="form-done-icon" aria-hidden="true">✓</span><span class="eyebrow">Enquiry received</span></div><h3 id="form-done-title">Thank you for getting in touch.</h3><p class="form-done-lead">Your enquiry has been sent successfully.</p><p class="form-done-next"></p><div class="form-done-foot"><span>HALO Branding</span><span>Clarity begins here.</span></div>';
+done.innerHTML='<div class="form-done-head"><span class="form-done-icon" aria-hidden="true">✓</span><span class="eyebrow">Enquiry received</span></div><h3 id="form-done-title">Thank you for getting in touch.</h3><p class="form-done-next"></p><div class="form-done-foot"><span>HALO Branding</span><span>Clarity begins here.</span></div>';
 done.querySelector('.form-done-next').textContent='We\u2019ll reply to '+masked+' within two working days.';
-form.replaceWith(done);done.focus({preventScroll:true});done.scrollIntoView({block:'center',behavior:'smooth'});}
+form.closest('.split')?.querySelector('.notice')?.remove();form.replaceWith(done);done.focus({preventScroll:true});done.scrollIntoView({block:'center',behavior:'smooth'});}
 catch(err){status.classList.add('is-error');if(location.protocol==='file:'){status.textContent='The form only sends from the live website (halogbs.com), not from a file opened on this computer.';return}if(/activat/i.test(err.message)){status.textContent='Form not activated yet: please confirm the activation email sent to gina.ha@halogbs.com, then try again.';return}status.innerHTML='Sorry, your enquiry could not be sent. Please try again, or email <a href="mailto:gina.ha@halogbs.com">gina.ha@halogbs.com</a>.';}
 finally{btn.disabled=false;btn.textContent=label}});})();
 

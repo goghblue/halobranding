@@ -321,7 +321,6 @@ body .form-done-head .eyebrow{margin:0!important}
 body .form-done>:not(.form-done-head){margin-left:54px!important}
 body .form-done h3{font-family:Poppins,sans-serif!important;font-size:var(--t-h4)!important;font-weight:500!important;line-height:1.25!important;letter-spacing:-.01em;color:#0A0A0A!important;margin-top:14px!important;margin-bottom:16px!important}
 body .form-done p{font-size:16px!important;line-height:1.7!important;margin-top:0!important;margin-bottom:0!important}
-body .form-done .form-done-lead{color:#0A0A0A!important}
 body .form-done .form-done-next{color:rgb(82,86,90)!important;margin-bottom:24px!important}
 body .form-done-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #e3e3e0;padding-top:16px;font-size:12px;line-height:1.5;letter-spacing:.04em;color:rgb(82,82,82)}
 body .form-done-foot span:first-child{font-weight:700;text-transform:uppercase;letter-spacing:.12em}
