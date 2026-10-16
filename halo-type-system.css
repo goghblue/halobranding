@@ -343,7 +343,7 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
   html body.method-page .perspectives{gap:0!important;border-top:1px solid #e3e3e0}
   html body.method-page #approach .perspective:not(:nth-child(3)){background:none!important}
   html body.method-page .perspectives .perspective{min-height:0!important;padding:18px 0!important;background:none!important;border-bottom:1px solid #e3e3e0}
-  html body.method-page .perspectives .perspective:nth-child(3){background:#fff7e6!important;padding:18px 14px!important}
+  html body.method-page .perspectives .perspective:nth-child(3){background:#fff7e6!important;padding:18px 14px!important;margin:0 -14px}   /* text lines up with 01/02, yellow bleeds into gutter */
   html body.method-page .perspective h3{margin:6px 0 4px!important}
   html body.method-page .steps{border:0!important;border-top:1px solid #e3e3e0!important}
   html body.method-page .step{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:baseline;padding:18px 0!important;border-bottom:1px solid #e3e3e0!important}
@@ -351,7 +351,11 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
   html body.method-page .step h3:after{display:none}
   html body.method-page .step .purpose{grid-column:2;margin:2px 0 0!important}
   html body.method-page .step:before{display:none!important}
-  html body.method-page .halo-motion{overflow:hidden}             /* orb no longer pushes the page sideways */
+  html body.method-page .halo-motion{overflow:hidden}
+  /* difference: arrow + bold outcome on one line under the "From…" line */
+  html body.method-page .case .case-arrow{display:inline!important;padding:0 8px 0 0!important}
+  html body.method-page .case .case-arrow::before{content:"\A";white-space:pre}
+  html body.method-page .case strong{display:inline!important}             /* orb no longer pushes the page sideways */
 
   /* services: no big gap under titles; per-service buttons outlined so only the bottom CTA is yellow */
   body .split{gap:12px!important}
