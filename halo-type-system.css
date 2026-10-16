@@ -352,6 +352,8 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
   html body.method-page .step .purpose{grid-column:2;margin:2px 0 0!important}
   html body.method-page .step:before{display:none!important}
   html body.method-page .halo-motion{overflow:hidden}
+  html body.method-page .sec-head{row-gap:0!important}             /* eyebrow→title 24px, same as home */
+  html body.method-page .sec-head h2{margin-top:0!important}
   /* difference: arrow + bold outcome on one line under the "From…" line */
   html body.method-page .case .case-arrow{display:inline!important;padding:0 8px 0 0!important}
   html body.method-page .case .case-arrow::before{content:"\A";white-space:pre}
