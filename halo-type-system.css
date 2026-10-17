@@ -393,3 +393,9 @@ body .method-def{max-width:680px;margin:20px 0 0!important;font-size:var(--t-lea
 body .method-def strong{color:#0A0A0A;font-weight:600}
 /* Method H1 accent: HALO yellow on display size only (fails 3:1 at small sizes, keep it to this one heading) */
 body .hero h1 .h1-accent{color:#FCB632}
+/* Analytics consent banner */
+body .consent{position:fixed;z-index:50;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:560px;margin-left:auto;background:#fff;border:1px solid #e3e3e0;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.12);padding:18px 20px;display:grid;gap:14px}
+body .consent p{margin:0!important;font-size:14px!important;line-height:1.6!important;color:rgb(82,86,90)!important}
+body .consent a{color:#0A0A0A;text-decoration:underline}
+body .consent-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+body .consent .button.ghost{background:#fff!important;border:1px solid #ccc!important;border-radius:24px!important}
