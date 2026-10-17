@@ -391,3 +391,5 @@ body .brandstrip .logo-item.is-clone{display:none!important}   /* clones only us
 /* Method: plain-language definition under the hero (quotable by search/AI) */
 body .method-def{max-width:680px;margin:20px 0 0!important;font-size:var(--t-lead)!important;line-height:1.6!important;color:rgb(82,86,90)!important}
 body .method-def strong{color:#0A0A0A;font-weight:600}
+/* Method H1 accent: HALO yellow on display size only (fails 3:1 at small sizes, keep it to this one heading) */
+body .hero h1 .h1-accent{color:#FCB632}
