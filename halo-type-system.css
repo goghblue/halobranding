@@ -399,3 +399,14 @@ body .consent p{margin:0!important;font-size:14px!important;line-height:1.6!impo
 body .consent a{color:#0A0A0A;text-decoration:underline}
 body .consent-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
 body .consent .button.ghost{background:#fff!important;border:1px solid #ccc!important;border-radius:24px!important}
+/* Privacy: legal-document layout — modest section heads, heading column + text column, ruled sections */
+body .privacy-doc h1{margin-bottom:12px!important}
+body .privacy-doc>.sub{max-width:640px;margin:0 0 40px!important}
+body .privacy-doc .pv-sec{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,640px);gap:8px 48px;padding:28px 0;border-top:1px solid #e3e3e0}
+body .privacy-doc .pv-sec:last-of-type{border-bottom:1px solid #e3e3e0}
+html body:not(:has(#halo-motion-home-hero)) main .privacy-doc .pv-sec h2{font-family:Poppins,sans-serif!important;font-size:18px!important;font-weight:500!important;line-height:1.4!important;letter-spacing:0!important;margin:0!important;color:#0A0A0A!important}
+body .privacy-doc .pv-body p{font-size:16px!important;line-height:1.7!important;margin:0 0 12px!important;max-width:none!important}
+body .privacy-doc .pv-body p:last-child{margin-bottom:0!important}
+body .privacy-doc .pv-body a{color:inherit;text-decoration:underline}
+body .privacy-doc .pv-updated{margin:20px 0 0!important;font-size:13px!important;color:rgb(82,86,90)!important}
+@media (max-width:800px){body .privacy-doc .pv-sec{grid-template-columns:1fr;padding:22px 0}}
