@@ -40,3 +40,5 @@ b.innerHTML='<p>We use Google Analytics cookies to understand how visitors use t
 b.addEventListener('click',e=>{const c=e.target.dataset&&e.target.dataset.c;if(!c)return;const was=get();set(c);b.remove();if(c==='yes')loadGA();else if(was==='yes'){clearGA();location.reload()}});document.body.appendChild(b)};
 document.addEventListener('click',e=>{if(e.target.closest('[data-cookie-settings]')){e.preventDefault();show()}});
 const c=get();if(c==='yes')loadGA();else if(!c)show();})();
+
+(function(){var p=location.pathname.split('/').pop()||'index.html',d=location.pathname.indexOf('/post/')>-1;var t=d?'insights.html':/^case-/.test(p)?'cases.html':p;document.querySelectorAll('.navlinks a:not(.button)').forEach(function(a){if((a.getAttribute('href')||'').split('/').pop()===t)a.setAttribute('aria-current','page')})})();

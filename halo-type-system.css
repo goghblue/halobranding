@@ -410,3 +410,6 @@ body .privacy-doc .pv-body p:last-child{margin-bottom:0!important}
 body .privacy-doc .pv-body a{color:inherit;text-decoration:underline}
 body .privacy-doc .pv-updated{margin:20px 0 0!important;font-size:13px!important;color:rgb(82,86,90)!important}
 @media (max-width:800px){body .privacy-doc .pv-sec{grid-template-columns:1fr;padding:22px 0}}
+
+/* current page in top nav */
+html body .navlinks a[aria-current="page"]:not(.button){font-weight:700!important;color:#0a0a0a!important;text-decoration:underline;text-decoration-color:#FCB632;text-decoration-thickness:2px;text-underline-offset:8px}
