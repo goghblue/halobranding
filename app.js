@@ -15,7 +15,7 @@ fields.forEach(el=>el.addEventListener('blur',()=>check(el)));fields.forEach(el=
 form.addEventListener('submit',async e=>{e.preventDefault();const ok=fields.map(check).every(Boolean);if(!ok){form.querySelector('[aria-invalid=true]')?.focus();return}
 if(form._honey.value)return;
 const topic=form.topic.selectedOptions[0].text;
-const data={name:form.name.value.trim(),email:form.email.value.trim(),topic,message:form.message.value.trim(),_subject:'HALO enquiry: '+topic,_replyto:form.email.value.trim(),_template:'table',_captcha:'false'};
+const data={name:form.name.value.trim(),email:form.email.value.trim(),...(form.company?{company:form.company.value.trim()}:{}),topic,message:form.message.value.trim(),_subject:'HALO enquiry: '+topic,_replyto:form.email.value.trim(),_template:'table',_captcha:'false'};
 btn.disabled=true;btn.textContent='Sending…';status.className='form-status';status.textContent='';
 try{const r=await fetch(form.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});const j=await r.json().catch(()=>({}));
 if(!r.ok||j.success===false||j.success==='false'){console.warn('[HALO form]',r.status,j.message||j);throw new Error(j.message||'failed')}
