@@ -41,4 +41,4 @@ b.addEventListener('click',e=>{const c=e.target.dataset&&e.target.dataset.c;if(!
 document.addEventListener('click',e=>{if(e.target.closest('[data-cookie-settings]')){e.preventDefault();show()}});
 const c=get();if(c==='yes')loadGA();else if(!c)show();})();
 
-(function(){var p=location.pathname.split('/').pop()||'index.html',d=location.pathname.indexOf('/post/')>-1;var t=d?'insights.html':/^case-/.test(p)?'cases.html':p;document.querySelectorAll('.navlinks a:not(.button)').forEach(function(a){if((a.getAttribute('href')||'').split('/').pop()===t)a.setAttribute('aria-current','page')})})();
+(function(){var n=function(x){return(x||'').split(/[?#]/)[0].split('/').pop().replace(/\.html$/,'')||'index'};var path=location.pathname,p=n(path),t=path.indexOf('/post/')>-1?'insights':/^case-/.test(p)?'cases':p;document.querySelectorAll('.navlinks a:not(.button)').forEach(function(a){if(n(a.getAttribute('href'))===t)a.setAttribute('aria-current','page')})})();
